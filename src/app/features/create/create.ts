@@ -22,7 +22,10 @@ export class Create {
   router = inject(Router);
 
   form = new FormGroup({
-    title: new FormControl<string>('', { nonNullable: true, validators: Validators.required, }),
+    title: new FormControl<string>('', {
+      nonNullable: true,
+      validators: Validators.required,
+    }),
   })
 
   onSubmit() {
