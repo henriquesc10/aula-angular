@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ProductsService } from '../../shared/services/products.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../../shared/services/interfaces/products.interface';
+import { Product } from '../../shared/interfaces/products.interface';
 import { Form } from '../../shared/components/form/form';
 
 @Component({

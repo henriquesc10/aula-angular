@@ -1,6 +1,6 @@
 import { Component, EventEmitter, input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { Product } from '../../services/interfaces/products.interface';
+import { Product } from '../../interfaces/products.interface';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';

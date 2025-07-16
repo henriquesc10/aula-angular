@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Product } from '../../shared/services/interfaces/products.interface';
+import { Product } from '../../shared/interfaces/products.interface';
 import { ProductsService } from '../../shared/services/products.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';

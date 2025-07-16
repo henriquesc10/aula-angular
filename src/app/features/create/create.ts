@@ -4,7 +4,7 @@ import { ProductsService } from '../../shared/services/products.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Form } from "../../shared/components/form/form";
-import { Product } from '../../shared/services/interfaces/products.interface';
+import { Product } from '../../shared/interfaces/products.interface';
 
 @Component({
   selector: 'app-create',
