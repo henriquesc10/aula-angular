@@ -13,10 +13,6 @@
       "title": "Sapato"
     },
     {
-      "id": "9e86",
-      "title": "Silva"
-    },
-    {
       "id": "377d",
       "title": "Camiseta"
     },
@@ -27,18 +23,6 @@
     {
       "id": "b27a",
       "title": "Moletom"
-    },
-    {
-      "title": "Example",
-      "id": "46fb"
-    },
-    {
-      "id": "71bd",
-      "title": "Mais um exemplo"
-    },
-    {
-      "title": "Um exemplo para o interfaces (editado)",
-      "id": "b232"
     }
   ]
 }
