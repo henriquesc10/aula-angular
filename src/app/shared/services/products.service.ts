@@ -31,4 +31,4 @@ export class ProductsService {
     return this.httpClient.delete(`/api/products/${id}`);
   }
 
-}
+} // Fecha a classe ProductsService
