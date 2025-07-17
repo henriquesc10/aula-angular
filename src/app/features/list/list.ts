@@ -1,9 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Product } from '../../shared/interfaces/products.interface';
 import { ProductsService } from '../../shared/services/products.service';
 import { MatButtonModule } from '@angular/material/button';
 import { Cards } from './components/cards/card';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { filter } from 'rxjs';
 import { ConfirmationDialog } from '../../shared/services/confirmation-dialog';
@@ -17,30 +17,37 @@ import { ConfirmationDialog } from '../../shared/services/confirmation-dialog';
 })
 export class List {
 
-  products: Product[] = [];
+  products = signal<Product[]>(
+    inject(ActivatedRoute).snapshot.data['products']
+  );
+
+  constructor() {
+    this.loadProducts();
+  }
+
+  loadProducts() {
+    this.productsService.getAll().subscribe((product) => {
+      this.products.set(product);
+    });
+  }
 
   productsService = inject(ProductsService);
   router = inject(Router);
   matDialog = inject(MatDialog);
   confirmationDialog = inject(ConfirmationDialog);
 
-  ngOnInit() {
-    this.productsService.getAll().subscribe((products) => {
-      this.products = products;
-    });
-  }
-
   onEdit(product: Product) {
     this.router.navigate(['/edit-product', product.id]);
   }
 
   onDelete(product: Product) {
-    this.confirmationDialog.openDialog()
-      .pipe(filter(answer => answer === true))
+    this.confirmationDialog
+      .openDialog()
+      .pipe(filter((answer) => answer === true))
       .subscribe(() => {
         this.productsService.delete(product.id).subscribe(() => {
           this.productsService.getAll().subscribe((product) => {
-            this.products = product;
+            this.products.set(product);
           });
         });
       });
