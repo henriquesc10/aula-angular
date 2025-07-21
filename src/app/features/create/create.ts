@@ -5,11 +5,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Form } from "../../shared/components/form/form";
 import { Product } from '../../shared/interfaces/products.interface';
+import { BackToList } from '../../shared/components/back-to-list/back-to-list';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [Form],
+  imports: [Form, BackToList],
   templateUrl: './create.html',
   styleUrl: './create.css'
 })
