@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, Injectable } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Injectable, ViewEncapsulation } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogContent, MatDialogActions, MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
@@ -7,11 +7,11 @@ import { filter } from 'rxjs/operators';
 @Component({
   selector: 'app-confirmation-dialog',
   template: `
-  <h2 mat-dialog-title>Delete file</h2>
+  <h2 mat-dialog-title style="color: white; text-align: center;">Delete file</h2>
   <mat-dialog-content>
     Tem certeza que quer deletar esse produto?
   </mat-dialog-content>
-  <mat-dialog-actions align="start">
+  <mat-dialog-actions>
     <button mat-button (click)="onNo()">Não</button>
     <button mat-raised-button (click)="onYes()">Sim</button>
   </mat-dialog-actions>

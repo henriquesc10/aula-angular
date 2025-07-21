@@ -1,28 +1,3 @@
 {
-  "products": [
-    {
-      "title": "Produto de teste alterado",
-      "id": "1"
-    },
-    {
-      "id": "0698",
-      "title": "Henrique"
-    },
-    {
-      "id": "0882",
-      "title": "Sapato"
-    },
-    {
-      "id": "377d",
-      "title": "Camiseta"
-    },
-    {
-      "id": "2565",
-      "title": "Blusão"
-    },
-    {
-      "id": "b27a",
-      "title": "Moletom"
-    }
-  ]
+  "products": []
 }
